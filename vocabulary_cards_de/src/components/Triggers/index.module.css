@@ -1,0 +1,12 @@
+.triggers button {
+    margin: 5px;
+    padding: 10px;
+    background: -webkit-linear-gradient(90deg, #269ef1,#7036be);
+    background: linear-gradient(90deg, #269ef1,#7036be);
+    color: white;
+    border: 1px solid #7036be;
+    border-radius: 7px;
+    cursor: pointer;
+    width: 90px;
+    font-size: 15px;
+}
