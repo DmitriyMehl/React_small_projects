@@ -1,10 +1,12 @@
 import React from 'react'
+import AddProductVegetables from '../../components/AddProductForm/AddProductVegetables'
 import VegetablesContainer from '../../components/VegetablesContainer'
 
 export default function VegetablesPage() {
   return (
     <div>
-        <VegetablesContainer />
+      <AddProductVegetables />
+      <VegetablesContainer />
     </div>
   )
 }

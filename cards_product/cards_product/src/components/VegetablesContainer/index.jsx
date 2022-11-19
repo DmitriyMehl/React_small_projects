@@ -5,12 +5,12 @@ import s from "./index.module.css"
 
 export default function VegetablesContainer() {
 
-    const { vegetables } = useContext(Context);
+    const { v_cards } = useContext(Context);
 
   return (
     <div className={s.v_container}>
         {
-            vegetables.map(el => <Product key={el.id} {...el} />)
+            v_cards.map(el => <Product key={el.id} {...el} />)
         }
     </div>
   )
