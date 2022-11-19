@@ -3,11 +3,12 @@ import { Context } from "../../context"
 import FruitsPage from "../../pages/FruitsPage";
 import VegetablesPage from "../../pages/VegetablesPage";
 import NavMenu from "../NavMenu";
+import { vegetables, fruits } from "../../data/products"
 
 function App() {
   return (
     <div>
-      <Context.Provider>
+      <Context.Provider value={{ vegetables, fruits }}>
         <NavMenu />
           <Routes>
             <Route path="/fruits_page" element={<FruitsPage />} />
