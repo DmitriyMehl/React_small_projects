@@ -10,7 +10,7 @@
     align-items: center;
     height: 200px;
     border-bottom: 1px solid rgb(22, 120, 51);
-    gap: 41%;
+    gap: 25%;
     background: url("https://media.istockphoto.com/id/1284690585/de/foto/bunte-gem%C3%BCse-und-fr%C3%BCchte-veganes-essen-in-regenbogenfarben.jpg?s=1024x1024&w=is&k=20&c=dsxGMEtvYxFwLiT2ZT8Alfm67nWbkp_DGK7VsIKwrB8=");
     background-size: cover;
 }
@@ -18,8 +18,9 @@
 .nav_menu a {
     font-size: 70px;
     text-decoration: none;
-    color: white;
+    color: rgb(0, 0, 0);
     border: 1px solid black;
     border-radius: 10px;
-    padding: 0 10px;
+    padding: 0 15px;
+    background: linear-gradient(90deg, #ffd972,#ffcb3d,#ffbb00);
 }

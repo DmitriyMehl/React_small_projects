@@ -1,5 +1,6 @@
 import React, { useContext } from 'react'
 import { Context } from '../../../context';
+import s from "./index.module.css"
 
 export default function AddProductVegetables() {
 
@@ -20,7 +21,7 @@ export default function AddProductVegetables() {
     }
 
   return (
-    <form onSubmit={submit} >
+    <form onSubmit={submit} className={s.form} >
         <input type="text" name='title' placeholder='Title' />
         <input type="text" name='price' placeholder='Price' />
         <input type="text" name='country' placeholder='Country' />
