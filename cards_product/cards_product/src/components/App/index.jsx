@@ -11,8 +11,11 @@ function App() {
   const [ v_cards, setCardsV ] = useState(vegetables);
   const [ f_cards, setCardsF ] = useState(fruits);
 
+  const sort_vegetables = v_cards.sort((a ,b) => a.price - b.price);
+  const sort_fruits = f_cards.sort((a ,b) => a.price - b.price);
+
   const add_cards_v = (title, price, country) => setCardsV ([
-    ...v_cards,
+    ...sort_vegetables,
     {
       id: Date.now(),
       title,
@@ -22,7 +25,7 @@ function App() {
   ]);
 
   const add_cards_f = (title, price, country) => setCardsF ([
-    ...f_cards,
+    ...sort_fruits,
     {
       id: Date.now(),
       title,
@@ -33,7 +36,7 @@ function App() {
 
   return (
     <div>
-      <Context.Provider value={{ f_cards, v_cards, add_cards_v, add_cards_f }}>
+      <Context.Provider value={{ sort_fruits, sort_vegetables, add_cards_v, add_cards_f }}>
         <NavMenu />
           <Routes>
             <Route path="/fruits_page" element={<FruitsPage />} />

@@ -1,18 +1,19 @@
 .form input {
     padding: 10px;
     margin: 5px;
-    border: 2px solid #7036be;
+    border: 2px solid #d39c02;
     border-radius: 5px;
 }
 
 .form button {
-    margin: 5px;
+    margin: 17px;
     padding: 10px;
-    background: -webkit-linear-gradient(90deg, #269ef1,#7036be);
-    background: linear-gradient(90deg, #269ef1,#7036be);
-    color: white;
-    border: 1px solid #7036be;
+    color: black;
+    border: 2px solid #d39c02;
     border-radius: 7px;
     cursor: pointer;
-    width: 90px;
+    width: 130px;
+    font-size: 13px;
+    font-weight: 700;
+    background: linear-gradient(90deg, #ffda75,#ffcb3d,#ffbb00);
 }

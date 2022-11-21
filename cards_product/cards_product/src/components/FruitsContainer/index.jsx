@@ -5,12 +5,12 @@ import s from "./index.module.css"
 
 export default function FruitsContainer() {
 
-    const { f_cards } = useContext(Context);
+    const { sort_fruits } = useContext(Context);
 
   return (
     <div className={s.f_container}>
         {
-            f_cards.map(el => <Product key={el.id} {...el} />)
+            sort_fruits.map(el => <Product key={el.id} {...el} />)
         }
     </div>
   )
