@@ -1,6 +1,5 @@
-import React, { useContext } from 'react'
+import React from 'react'
 import s from "./index.module.css"
-import { Context } from '../../context'
 
 export default function Product({ title, price, country }) {
   return (
