@@ -4,13 +4,13 @@ import s from "./index.module.css"
 
 export default function AddProductVegetables() {
 
-    const { add_cards_v } = useContext(Context);
+    const { add_veg_cards } = useContext(Context);
 
     const submit = event => {
         event.preventDefault();
         const { title, price, country } = event.target;
 
-        add_cards_v(
+        add_veg_cards(
             title.value, 
             price.value, 
             country.value);

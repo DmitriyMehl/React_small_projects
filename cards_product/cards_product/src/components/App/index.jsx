@@ -3,19 +3,17 @@ import { Context } from "../../context"
 import FruitsPage from "../../pages/FruitsPage";
 import VegetablesPage from "../../pages/VegetablesPage";
 import NavMenu from "../NavMenu";
-import { vegetables, fruits } from "../../data/products"
+import { fruits } from "../../data/fruits"
+import { vegetables } from "../../data/vegetables";
 import { useState } from "react";
 
 function App() {
 
-  const [ v_cards, setCardsV ] = useState(vegetables);
-  const [ f_cards, setCardsF ] = useState(fruits);
+  const [ vegCards, setVegCards ] = useState(vegetables);
+  const [ frutCards, setFrutCards ] = useState(fruits);
 
-  const sort_vegetables = v_cards.sort((a ,b) => a.price - b.price);
-  const sort_fruits = f_cards.sort((a ,b) => a.price - b.price);
-
-  const add_cards_v = (title, price, country) => setCardsV ([
-    ...sort_vegetables,
+  const add_veg_cards = (title, price, country) => setVegCards ([
+    ...vegCards,
     {
       id: Date.now(),
       title,
@@ -24,8 +22,8 @@ function App() {
     }
   ]);
 
-  const add_cards_f = (title, price, country) => setCardsF ([
-    ...sort_fruits,
+  const add_frut_cards = (title, price, country) => setFrutCards ([
+    ...frutCards,
     {
       id: Date.now(),
       title,
@@ -33,10 +31,13 @@ function App() {
       country
     }
   ]);
+
+  const delete_veg = (id) => setVegCards(vegCards.filter(el => el.id !== id));
+  const delete_frut = (id) => setFrutCards(frutCards.filter(el => el.id !== id));
 
   return (
     <div>
-      <Context.Provider value={{ sort_fruits, sort_vegetables, add_cards_v, add_cards_f }}>
+      <Context.Provider value={{ vegCards, frutCards, add_veg_cards, add_frut_cards, delete_veg, delete_frut }}>
         <NavMenu />
           <Routes>
             <Route path="/fruits_page" element={<FruitsPage />} />

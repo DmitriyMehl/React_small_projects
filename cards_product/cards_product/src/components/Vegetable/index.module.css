@@ -1,0 +1,9 @@
+.product_card {
+    border: 1px solid rgb(215, 83, 2);
+    border-radius: 15px;
+    padding: 10px;
+    font-size: 25px;
+    cursor: pointer;
+    background: -webkit-linear-gradient(90deg, #f16205,#d98d00);
+    background: linear-gradient(90deg, #e57327,#ffa602);
+}

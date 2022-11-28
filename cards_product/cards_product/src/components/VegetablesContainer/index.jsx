@@ -1,16 +1,18 @@
 import React, { useContext } from 'react'
 import { Context } from '../../context'
-import Product from '../Product';
+import Vegetable from '../Vegetable';
 import s from "./index.module.css"
 
 export default function VegetablesContainer() {
 
-    const { sort_vegetables } = useContext(Context);
+    const { vegCards } = useContext(Context);
 
   return (
     <div className={s.v_container}>
         {
-            sort_vegetables.map(el => <Product key={el.id} {...el} />)
+            vegCards
+              .sort((a ,b) => a.price - b.price)
+              .map(el => <Vegetable key={el.id} {...el} />)
         }
     </div>
   )
