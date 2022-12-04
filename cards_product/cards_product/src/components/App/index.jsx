@@ -13,16 +13,16 @@ function App() {
   const [ frutCards, setFrutCards ] = useState(fruits);
 
   useEffect(() => {
-    const veg = JSON.parse(localStorage.getItem("vegetables"));
-    const frut = JSON.parse(localStorage.getItem("fruits"));
+    const veg = JSON.parse(localStorage.getItem("vegCards"));
+    const frut = JSON.parse(localStorage.getItem("frutCards"));
     setVegCards(veg);
     setFrutCards(frut);
   }, []);
 
   useEffect(() => {
-    localStorage.setItem("vegetables", JSON.stringify(vegetables));
-    localStorage.setItem("fruits", JSON.stringify(fruits));
-  }, [vegetables, fruits]);
+    localStorage.setItem("vegCards", JSON.stringify(vegCards));
+    localStorage.setItem("frutCards", JSON.stringify(frutCards));
+  }, [vegCards, frutCards]);
 
   const add_veg_cards = (title, price, country) => setVegCards ([
     ...vegCards,
