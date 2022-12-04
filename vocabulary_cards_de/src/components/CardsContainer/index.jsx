@@ -5,12 +5,12 @@ import { Context } from '../../context';
 
 export default function CardsContainer() {
 
-  const { cards } = useContext(Context);
+  const { card } = useContext(Context);
 
   return (
     <div className={s.cards_container}>
         {
-            cards.map(card => <CardItem key={card.id} {...card} />)
+            card.map(card => <CardItem key={card.id} {...card} />)
         }
     </div>
   )
