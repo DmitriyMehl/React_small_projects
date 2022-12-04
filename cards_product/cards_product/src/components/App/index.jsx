@@ -5,12 +5,24 @@ import VegetablesPage from "../../pages/VegetablesPage";
 import NavMenu from "../NavMenu";
 import { fruits } from "../../data/fruits"
 import { vegetables } from "../../data/vegetables";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 function App() {
 
   const [ vegCards, setVegCards ] = useState(vegetables);
   const [ frutCards, setFrutCards ] = useState(fruits);
+
+  useEffect(() => {
+    const veg = JSON.parse(localStorage.getItem("vegetables"));
+    const frut = JSON.parse(localStorage.getItem("fruits"));
+    setVegCards(veg);
+    setFrutCards(frut);
+  }, []);
+
+  useEffect(() => {
+    localStorage.setItem("vegetables", JSON.stringify(vegetables));
+    localStorage.setItem("fruits", JSON.stringify(fruits));
+  }, [vegetables, fruits]);
 
   const add_veg_cards = (title, price, country) => setVegCards ([
     ...vegCards,
